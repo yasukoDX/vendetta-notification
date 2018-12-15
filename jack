@@ -7,4 +7,15 @@
   "email": "yasukodx1@gmail.com",
   "flags": 64,
   "premium_type": 1
+ 
+# coding: utf-8
+import requests
+
+def discord(message):
+   # Discordで発行したWebhookのURLを入れる
+   discord_webhook_url = 'https://discordapp.com/api/webhooks/523394954106634240/0yJMosIuL7WzN4x2mMmH4HHAdkCN6Ed4YnWDSP2vSeJXK8xa29Ap5mXQYKLxHbhGui1b'
+   data = {"content": " " + message + " "}
+   requests.post(discord_webhook_url, data=data)
+
+discord('discord通知テスト')
 }
